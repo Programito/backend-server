@@ -26,7 +26,6 @@ app.get('/:tipo/:img', (req, res, next) => {
     */
 
     let pathImagen = path.resolve(__dirname, `../uploads/${tipo}/${img}`);
-    console.log(pathImagen);
 
     if (fs.existsSync(pathImagen)) {
         res.sendFile(pathImagen);
